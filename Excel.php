@@ -300,6 +300,8 @@ class Excel extends \yii\base\Widget
 	 */
 	public $formatter;
 	
+	public $type;
+	
 	/**
 	 * (non-PHPdoc)
 	 * @see \yii\base\Object::init()
@@ -569,7 +571,8 @@ class Excel extends \yii\base\Widget
 			$path = $this->savePath . '/' . $this->getFileName();
 		}
 		$objectwriter->save($path);
-		exit();
+		
+		if($this->type == 'exit') exit();
 	}
 	
 	/**
