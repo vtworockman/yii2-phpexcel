@@ -300,7 +300,7 @@ class Excel extends \yii\base\Widget
 	 */
 	public $formatter;
 	
-	public $type;
+	public $exit;
 	
 	/**
 	 * (non-PHPdoc)
@@ -572,7 +572,7 @@ class Excel extends \yii\base\Widget
 		}
 		$objectwriter->save($path);
 		
-		if($this->type == 'exit') exit();
+		if($this->exit) exit();
 	}
 	
 	/**
