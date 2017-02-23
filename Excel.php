@@ -300,7 +300,7 @@ class Excel extends \yii\base\Widget
 	 */
 	public $formatter;
 	
-	public $exit;
+	public $exit = true;
 	
 	/**
 	 * (non-PHPdoc)
